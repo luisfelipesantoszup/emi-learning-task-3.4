@@ -57,6 +57,9 @@
                                             <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
                                             <color key="baseBackgroundColor" name="Blue Marguerite"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="botaoLoginPressionado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EKz-Z5-cVV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FE-tH-yj9">
                                         <rect key="frame" x="32" y="317" width="286" height="31"/>
@@ -65,6 +68,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Esqueceu a senha?">
                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="botaoRedefinirPressionado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E66-gC-Dot"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -101,6 +107,10 @@
                             <constraint firstItem="bhH-in-kdP" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="abU-gc-q9U"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="hii-Ta-a1w" id="tn7-0p-ucg"/>
+                        <outlet property="senhaTextField" destination="j1M-wq-dno" id="BvE-LZ-uvO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
