@@ -17,11 +17,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func botaoLoginPressionado(_ sender: UIButton) {
-        if emailTextField.text == "" || senhaTextField.text == "" {
-            exibirAlertaDeCampoEmBranco()
+        if checarCamposPreenchidos() {
+            exibirAlertaDeLogin()
         }
         else {
-            exibirAlertaDeLogin()
+            exibirAlertaDeCampoEmBranco()
         }
     }
     
@@ -31,9 +31,16 @@ class ViewController: UIViewController {
         
         let alert = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func checarCamposPreenchidos() -> Bool {
+        if emailTextField.text == "" || senhaTextField.text == "" {
+            return false
+        }
+        return true
     }
     
     func exibirAlertaDeCampoEmBranco() {
@@ -42,7 +49,7 @@ class ViewController: UIViewController {
         
         let alert = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
     }
@@ -57,7 +64,7 @@ class ViewController: UIViewController {
         
         let alert = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
     }
